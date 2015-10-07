@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pjN-7i-lxV">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftCalandariostatusUpdate" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1IZ-Sy-sij"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1231.5" y="349.5"/>
+        </scene>
+        <!--Welcome View Controller-->
+        <scene sceneID="dDY-GL-sHU">
+            <objects>
+                <viewController storyboardIdentifier="welcome" id="e0W-tG-cdx" customClass="WelcomeViewController" customModule="SwiftCalandariostatusUpdate" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gN8-3d-4Rf"/>
+                        <viewControllerLayoutGuide type="bottom" id="b64-ZE-P0X"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q7D-ka-HIP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to Calendario " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fC-Bm-F6a">
+                                <rect key="frame" x="96" y="291" width="182" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Update" id="Lqw-vk-mMr">
+                            <connections>
+                                <segue destination="Osk-MV-FPb" kind="show" id="Pyy-h7-9OF"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="topButton" destination="Lqw-vk-mMr" id="WRV-q9-dR8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xxm-Gc-Swv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1691.5" y="349.5"/>
+        </scene>
+        <!--Status Update View Controller-->
+        <scene sceneID="0PB-9o-0Zh">
+            <objects>
+                <viewController id="Osk-MV-FPb" customClass="StatusUpdateViewController" customModule="SwiftCalandariostatusUpdate" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6uY-3p-gXs"/>
+                        <viewControllerLayoutGuide type="bottom" id="jv1-4C-yqZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cKT-ea-PUz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xz3-vr-J2L">
+                                <rect key="frame" x="27" y="61" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BaF-4o-STR">
+                                <rect key="frame" x="7" y="238" width="361" height="239"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="239" id="LPJ-GU-gqX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BaF-4o-STR" firstAttribute="centerX" secondItem="cKT-ea-PUz" secondAttribute="centerX" id="8AD-ig-Bmh"/>
+                            <constraint firstItem="jv1-4C-yqZ" firstAttribute="top" secondItem="BaF-4o-STR" secondAttribute="bottom" constant="146" id="MQK-13-4gQ"/>
+                            <constraint firstItem="Xz3-vr-J2L" firstAttribute="leading" secondItem="cKT-ea-PUz" secondAttribute="leadingMargin" constant="11" id="hZH-PT-vrU"/>
+                            <constraint firstItem="BaF-4o-STR" firstAttribute="leading" secondItem="cKT-ea-PUz" secondAttribute="leadingMargin" constant="-9" id="iz3-4a-dBG"/>
+                            <constraint firstItem="Xz3-vr-J2L" firstAttribute="top" secondItem="6uY-3p-gXs" secondAttribute="bottom" constant="41" id="nvK-kM-8rN"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem systemItem="done" id="8DP-Rn-Bv2">
+                            <connections>
+                                <action selector="DoneButtonTapped:" destination="Osk-MV-FPb" id="hOW-Ln-1Dy"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="DoneButton" destination="8DP-Rn-Bv2" id="DOW-dh-Alt"/>
+                        <outlet property="stausUpdateTextField" destination="BaF-4o-STR" id="3qS-Cd-g9q"/>
+                        <outlet property="userlabel" destination="Xz3-vr-J2L" id="UOx-iq-5ax"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Yw-YU-wjK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2140.5" y="344.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UVK-xo-aMw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pjN-7i-lxV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TrC-Z6-3Ml">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="sNB-Ph-O0g"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Go-ju-KIQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="458.5" y="454.5"/>
+        </scene>
+    </scenes>
+</document>
