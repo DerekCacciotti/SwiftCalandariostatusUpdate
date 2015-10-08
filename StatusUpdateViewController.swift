@@ -16,11 +16,18 @@ class StatusUpdateViewController: UIViewController {
     
     @IBOutlet weak var userlabel: UILabel!
     
+    @IBOutlet weak var dateLabel: UILabel!
+    
+    @IBOutlet weak var datepicker: UIDatePicker!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationItem.setRightBarButtonItem(DoneButton, animated: true)
         userlabel.text = PFUser.currentUser()?.username
+        
         
 
         // Do any additional setup after loading the view.
@@ -39,11 +46,15 @@ class StatusUpdateViewController: UIViewController {
     func PostStatusUpdate()
     {
         // for now this only post the data to the backend 
+       
+        
+        
         
         var statusUpdate = PFObject(className: "StatusUpdate")
         statusUpdate["updatetext"] = stausUpdateTextField.text
         statusUpdate["user"] = PFUser.currentUser()
         statusUpdate["url"] = "google.com"
+        statusUpdate["date"] = dateLabel.text
         
         
         statusUpdate.saveInBackgroundWithBlock { (success:Bool, error:NSError?) -> Void in
@@ -58,8 +69,26 @@ class StatusUpdateViewController: UIViewController {
         }
         
         
+        
+        
     }
-
+    
+    
+    @IBAction func datePickerChnged(sender: AnyObject) {
+        setDate()
+    }
+    
+    
+    func setDate()
+    {
+        let dateFormatter = NSDateFormatter()
+        
+        dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
+        dateLabel.text = dateFormatter.stringFromDate(datepicker.date)
+        
+    }
+    
+    
     /*
     // MARK: - Navigation
 

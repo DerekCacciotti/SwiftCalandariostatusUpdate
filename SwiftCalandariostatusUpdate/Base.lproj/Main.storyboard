@@ -86,24 +86,48 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BaF-4o-STR">
-                                <rect key="frame" x="7" y="238" width="361" height="239"/>
+                                <rect key="frame" x="37" y="120" width="301" height="210"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="239" id="LPJ-GU-gqX"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MM/DD/YY HH:MM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWL-Um-iuL">
+                                <rect key="frame" x="211" y="61" width="132" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="2yO-Ug-vln">
+                                <rect key="frame" x="22" y="382" width="331" height="167"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="167" id="jeY-4K-60X"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="465962853.07758701">
+                                    <!--2015-10-08 02:07:33 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="datePickerChnged:" destination="Osk-MV-FPb" eventType="valueChanged" id="2Xn-7y-Shb"/>
+                                </connections>
+                            </datePicker>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="BaF-4o-STR" firstAttribute="centerX" secondItem="cKT-ea-PUz" secondAttribute="centerX" id="8AD-ig-Bmh"/>
-                            <constraint firstItem="jv1-4C-yqZ" firstAttribute="top" secondItem="BaF-4o-STR" secondAttribute="bottom" constant="146" id="MQK-13-4gQ"/>
-                            <constraint firstItem="Xz3-vr-J2L" firstAttribute="leading" secondItem="cKT-ea-PUz" secondAttribute="leadingMargin" constant="11" id="hZH-PT-vrU"/>
-                            <constraint firstItem="BaF-4o-STR" firstAttribute="leading" secondItem="cKT-ea-PUz" secondAttribute="leadingMargin" constant="-9" id="iz3-4a-dBG"/>
-                            <constraint firstItem="Xz3-vr-J2L" firstAttribute="top" secondItem="6uY-3p-gXs" secondAttribute="bottom" constant="41" id="nvK-kM-8rN"/>
+                            <constraint firstItem="BaF-4o-STR" firstAttribute="top" secondItem="Xz3-vr-J2L" secondAttribute="bottom" constant="38" id="6wy-zQ-yVJ"/>
+                            <constraint firstItem="Xz3-vr-J2L" firstAttribute="top" secondItem="iWL-Um-iuL" secondAttribute="top" id="7ho-mA-Pld"/>
+                            <constraint firstItem="2yO-Ug-vln" firstAttribute="centerX" secondItem="BaF-4o-STR" secondAttribute="centerX" id="9X4-Vy-967"/>
+                            <constraint firstItem="2yO-Ug-vln" firstAttribute="leading" secondItem="cKT-ea-PUz" secondAttribute="leadingMargin" constant="6" id="C1k-z3-dCl"/>
+                            <constraint firstItem="2yO-Ug-vln" firstAttribute="centerX" secondItem="cKT-ea-PUz" secondAttribute="centerX" id="Fz6-Yd-EUX"/>
+                            <constraint firstItem="2yO-Ug-vln" firstAttribute="top" secondItem="BaF-4o-STR" secondAttribute="bottom" constant="52" id="Ixw-wr-wQd"/>
+                            <constraint firstItem="BaF-4o-STR" firstAttribute="leading" secondItem="cKT-ea-PUz" secondAttribute="leadingMargin" constant="21" id="RQm-YC-iFr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iWL-Um-iuL" secondAttribute="trailing" constant="16" id="aM4-gr-vJq"/>
+                            <constraint firstItem="iWL-Um-iuL" firstAttribute="bottom" secondItem="Xz3-vr-J2L" secondAttribute="bottom" id="b5w-bm-a2t"/>
+                            <constraint firstItem="Xz3-vr-J2L" firstAttribute="leading" secondItem="cKT-ea-PUz" secondAttribute="leadingMargin" constant="11" id="lWm-X4-h7G"/>
+                            <constraint firstItem="jv1-4C-yqZ" firstAttribute="top" secondItem="2yO-Ug-vln" secondAttribute="bottom" constant="74" id="sIG-Cu-QBW"/>
+                            <constraint firstItem="Xz3-vr-J2L" firstAttribute="top" secondItem="6uY-3p-gXs" secondAttribute="bottom" constant="41" id="umF-P2-Jmj"/>
                         </constraints>
                     </view>
                     <toolbarItems>
@@ -116,6 +140,8 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="DoneButton" destination="8DP-Rn-Bv2" id="DOW-dh-Alt"/>
+                        <outlet property="dateLabel" destination="iWL-Um-iuL" id="V72-Jz-nSc"/>
+                        <outlet property="datepicker" destination="2yO-Ug-vln" id="O8G-QE-Whm"/>
                         <outlet property="stausUpdateTextField" destination="BaF-4o-STR" id="3qS-Cd-g9q"/>
                         <outlet property="userlabel" destination="Xz3-vr-J2L" id="UOx-iq-5ax"/>
                     </connections>
