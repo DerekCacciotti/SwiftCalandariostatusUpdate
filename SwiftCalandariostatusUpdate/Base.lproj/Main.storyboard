@@ -100,10 +100,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="2yO-Ug-vln">
-                                <rect key="frame" x="22" y="382" width="331" height="167"/>
+                                <rect key="frame" x="20" y="399" width="331" height="167"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="167" id="jeY-4K-60X"/>
+                                    <constraint firstAttribute="height" constant="167" id="Ije-mE-zQJ"/>
                                 </constraints>
                                 <date key="date" timeIntervalSinceReferenceDate="465962853.07758701">
                                     <!--2015-10-08 02:07:33 +0000-->
@@ -112,22 +112,31 @@
                                     <action selector="datePickerChnged:" destination="Osk-MV-FPb" eventType="valueChanged" id="2Xn-7y-Shb"/>
                                 </connections>
                             </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="400" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIA-zV-uky">
+                                <rect key="frame" x="297" y="349" width="32" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="BaF-4o-STR" firstAttribute="top" secondItem="Xz3-vr-J2L" secondAttribute="bottom" constant="38" id="6wy-zQ-yVJ"/>
-                            <constraint firstItem="Xz3-vr-J2L" firstAttribute="top" secondItem="iWL-Um-iuL" secondAttribute="top" id="7ho-mA-Pld"/>
-                            <constraint firstItem="2yO-Ug-vln" firstAttribute="centerX" secondItem="BaF-4o-STR" secondAttribute="centerX" id="9X4-Vy-967"/>
-                            <constraint firstItem="2yO-Ug-vln" firstAttribute="leading" secondItem="cKT-ea-PUz" secondAttribute="leadingMargin" constant="6" id="C1k-z3-dCl"/>
-                            <constraint firstItem="2yO-Ug-vln" firstAttribute="centerX" secondItem="cKT-ea-PUz" secondAttribute="centerX" id="Fz6-Yd-EUX"/>
-                            <constraint firstItem="2yO-Ug-vln" firstAttribute="top" secondItem="BaF-4o-STR" secondAttribute="bottom" constant="52" id="Ixw-wr-wQd"/>
-                            <constraint firstItem="BaF-4o-STR" firstAttribute="leading" secondItem="cKT-ea-PUz" secondAttribute="leadingMargin" constant="21" id="RQm-YC-iFr"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="iWL-Um-iuL" secondAttribute="trailing" constant="16" id="aM4-gr-vJq"/>
-                            <constraint firstItem="iWL-Um-iuL" firstAttribute="bottom" secondItem="Xz3-vr-J2L" secondAttribute="bottom" id="b5w-bm-a2t"/>
-                            <constraint firstItem="Xz3-vr-J2L" firstAttribute="leading" secondItem="cKT-ea-PUz" secondAttribute="leadingMargin" constant="11" id="lWm-X4-h7G"/>
-                            <constraint firstItem="jv1-4C-yqZ" firstAttribute="top" secondItem="2yO-Ug-vln" secondAttribute="bottom" constant="74" id="sIG-Cu-QBW"/>
-                            <constraint firstItem="Xz3-vr-J2L" firstAttribute="top" secondItem="6uY-3p-gXs" secondAttribute="bottom" constant="41" id="umF-P2-Jmj"/>
+                            <constraint firstItem="jv1-4C-yqZ" firstAttribute="top" secondItem="2yO-Ug-vln" secondAttribute="bottom" constant="57" id="0NX-vd-r3t"/>
+                            <constraint firstItem="2yO-Ug-vln" firstAttribute="leading" secondItem="cKT-ea-PUz" secondAttribute="leadingMargin" constant="4" id="1wW-t6-wvJ"/>
+                            <constraint firstItem="BaF-4o-STR" firstAttribute="top" secondItem="Xz3-vr-J2L" secondAttribute="bottom" constant="38" id="77z-aV-J4i"/>
+                            <constraint firstItem="BaF-4o-STR" firstAttribute="leading" secondItem="cKT-ea-PUz" secondAttribute="leadingMargin" constant="21" id="9VT-sK-0gX"/>
+                            <constraint firstItem="fIA-zV-uky" firstAttribute="top" secondItem="BaF-4o-STR" secondAttribute="bottom" constant="19" id="CJq-VD-I9o"/>
+                            <constraint firstItem="2yO-Ug-vln" firstAttribute="top" secondItem="fIA-zV-uky" secondAttribute="bottom" constant="29" id="Dff-kA-5yw"/>
+                            <constraint firstItem="Xz3-vr-J2L" firstAttribute="leading" secondItem="cKT-ea-PUz" secondAttribute="leadingMargin" constant="11" id="GGw-Oi-jPL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fIA-zV-uky" secondAttribute="trailing" constant="30" id="HdX-1e-wUS"/>
+                            <constraint firstItem="iWL-Um-iuL" firstAttribute="bottom" secondItem="Xz3-vr-J2L" secondAttribute="bottom" id="MBC-6k-dBx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2yO-Ug-vln" secondAttribute="trailing" constant="8" id="T1p-zN-kGe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iWL-Um-iuL" secondAttribute="trailing" constant="16" id="Ugd-g5-qaD"/>
+                            <constraint firstItem="BaF-4o-STR" firstAttribute="centerX" secondItem="cKT-ea-PUz" secondAttribute="centerX" id="b5v-Qi-qeh"/>
+                            <constraint firstItem="iWL-Um-iuL" firstAttribute="top" secondItem="Xz3-vr-J2L" secondAttribute="top" id="epZ-bc-FHX"/>
+                            <constraint firstItem="Xz3-vr-J2L" firstAttribute="top" secondItem="6uY-3p-gXs" secondAttribute="bottom" constant="41" id="gzC-B9-N4G"/>
                         </constraints>
                     </view>
                     <toolbarItems>
@@ -140,6 +149,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="DoneButton" destination="8DP-Rn-Bv2" id="DOW-dh-Alt"/>
+                        <outlet property="charLabel" destination="fIA-zV-uky" id="1J1-n2-KIe"/>
                         <outlet property="dateLabel" destination="iWL-Um-iuL" id="V72-Jz-nSc"/>
                         <outlet property="datepicker" destination="2yO-Ug-vln" id="O8G-QE-Whm"/>
                         <outlet property="stausUpdateTextField" destination="BaF-4o-STR" id="3qS-Cd-g9q"/>

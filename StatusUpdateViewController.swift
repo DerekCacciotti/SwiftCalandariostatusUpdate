@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StatusUpdateViewController: UIViewController {
+class StatusUpdateViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var DoneButton: UIBarButtonItem!
     
@@ -20,6 +20,11 @@ class StatusUpdateViewController: UIViewController {
     
     @IBOutlet weak var datepicker: UIDatePicker!
     
+    @IBOutlet weak var charLabel: UILabel!
+    
+   
+    var statusID = arc4random()
+
     
     
     override func viewDidLoad() {
@@ -27,6 +32,8 @@ class StatusUpdateViewController: UIViewController {
         
         self.navigationItem.setRightBarButtonItem(DoneButton, animated: true)
         userlabel.text = PFUser.currentUser()?.username
+        stausUpdateTextField.delegate = self
+        print(statusID)
         
         
 
@@ -55,6 +62,7 @@ class StatusUpdateViewController: UIViewController {
         statusUpdate["user"] = PFUser.currentUser()
         statusUpdate["url"] = "google.com"
         statusUpdate["date"] = dateLabel.text
+        statusUpdate["ID"] = Int(statusID)
         
         
         statusUpdate.saveInBackgroundWithBlock { (success:Bool, error:NSError?) -> Void in
@@ -86,6 +94,20 @@ class StatusUpdateViewController: UIViewController {
         dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
         dateLabel.text = dateFormatter.stringFromDate(datepicker.date)
         
+    }
+    
+    
+    
+    // UItextfield delegate methods
+    
+    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+        var newLength:Int = (stausUpdateTextField.text as NSString).length + (text as NSString).length - range.length
+        var remainingchars: Int = 400 - newLength
+        
+        
+        charLabel.text = "\(remainingchars)"
+        
+        return (newLength > 400) ? false:true
     }
     
     
